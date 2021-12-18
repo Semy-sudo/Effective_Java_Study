@@ -1,0 +1,46 @@
+package item45;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class PersonTest {
+
+	public static void main(String[] args) {
+		List<Person> personList = new ArrayList<>();
+		personList.add(new Person("짱구",23,"010-1234-1234"));
+		personList.add(new Person("유리",23,"010-1234-1234"));
+		personList.add(new Person("철수",23,"010-1234-1234"));
+
+		//List -> Map
+		Map<String, Person> personMap = personList.stream()
+				.collect(Collectors.toMap(Person::getName, Function.identity()));
+				
+		for(Person p: personMap.values()) {
+			System.out.println(p.getAge() + " " + p.getName()+" "+p.getPhoneNumber());
+		}
+		
+		//collect() 를 이용하여 아이템을 원하는 자료형으로 변경 가능
+		//ex) collect 3개의 인자를 이용하여 자료형 변경하기
+		//stream 의 결과 -> hashSet
+		Stream<String> fruits = Stream.of("banana","apple","mango","kiwi");
+		//stream -> hashSet
+		//HashSet<String> fruitHashSet = fruits.collect(HashSet::new, HashSet::add, HashSet::addAll);
+		//stream -> set
+		Set<String> fruitSet = fruits.collect(Collectors.toSet());
+		for(String s: fruitSet) {
+			System.out.println(s);
+		}
+		//stream -> list
+		List<String> fruitList = fruits.collect(Collectors.toList());
+		for(String s: fruitList) {
+			System.out.println(s);
+		}
+		
+	}
+
+}

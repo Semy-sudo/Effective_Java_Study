@@ -1,0 +1,44 @@
+package Serialize;
+
+import java.util.HashMap;
+
+class Solution {
+    public String solution(String[] research, int n, int k) {
+        String answer = "";
+        HashMap<String,Integer> map = new HashMap<>();
+        int[][] arr = new int[research.length][research.length];
+        for(int s=0;s<research.length;s++) {
+        	
+        	for(int i=0;i<research[s].length();i++) {
+        		if(map.containsKey(research[k])) {
+        			map.put(research[i], 1);
+        		}else {
+        			map.put(research[i], map.get(research[s])+1);        		
+        		}
+        		//한문자열에 대해 검사후
+        		
+        		//조건1 검사
+        		for(String key: map.keySet()) {
+        			int[][s] = map.get(key);
+        		}
+        	}
+        	
+        }
+        
+        
+        
+        return answer;
+    }
+}
+
+public class Test {
+
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		String[] arr = {"yxxy","xxyyy"};
+		sol.solution(arr, 2, 1);
+		
+		
+	}
+
+}

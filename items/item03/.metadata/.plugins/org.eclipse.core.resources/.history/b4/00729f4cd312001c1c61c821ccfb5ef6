@@ -1,0 +1,61 @@
+package Serialize;
+
+import java.util.ArrayList;
+
+class Solution {
+	static class Car{
+		int num;
+		int total_time;
+		int start_h;
+		int start_m;
+		public Car(int num,int total_time,int start_h,int start_m) {
+			this.num = num;
+			this.total_time = total_time;
+			this.start_h = start_h;
+			this.start_m = start_m;
+		}
+	}
+	
+    public int[] solution(int[] fees, String[] records) {
+        int[] answer = {};
+        ArrayList<Car> list = new ArrayList<>();
+        
+        for(int r=0;r<records.length;r++) {
+        	String[] st = records[r].split(" ");
+        	//st[0] 시간
+        	//st[1] 차량번호
+        	//st[2] in out 여부
+        	// 리스트에 차가 있는 경우
+        	String[] time = st[0].split(":");
+        	int hour = Integer.parseInt(time[0]);
+        	int minute = Integer.parseInt(time[1]);
+        	
+        	for(int l = 0;l<list.size();l++) {
+        		if(list.get(l).num==Integer.parseInt(st[1])) {
+        			if(st[2].equals("IN")) {
+        				
+        				list.get(l).start_h = 
+        			}else {
+        				
+        			}
+        		}
+        	}
+        	
+        }
+        
+        return answer;
+    }
+}
+
+public class KakaoTest03 {
+
+	public static void main(String[] args) {
+		int[] fees = {180, 5000, 10, 600};
+		String[] records = {"05:34 5961 IN", "06:00 0000 IN", "06:34 0000 OUT", "07:59 5961 OUT", "07:59 0148 IN", "18:59 0000 IN", "19:09 0148 OUT", "22:59 5961 IN", "23:00 5961 OUT"};
+		
+		Solution sol = new Solution();
+		sol.solution(fees, records);
+
+	}
+
+}

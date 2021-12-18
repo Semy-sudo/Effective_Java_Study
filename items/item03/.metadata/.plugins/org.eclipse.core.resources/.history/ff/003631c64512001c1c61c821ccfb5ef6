@@ -1,0 +1,24 @@
+package GenericTest;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Student<T>{
+	//static 변수에는 제네릭을 쓸 수 없음
+	//: static 은 클래스가 인스턴스가 되기전에 메모리에 올라가는데,
+	// 이때 name의 타입이 결정되지 않았기 때문에 오류가 남.
+	//static T name;
+	
+//	static T getName(T name) {
+//		return name;
+//	}
+	
+	ArrayList list = new ArrayList<>();
+	list.add(1);
+	list.add(2);
+	
+	
+	
+	
+}

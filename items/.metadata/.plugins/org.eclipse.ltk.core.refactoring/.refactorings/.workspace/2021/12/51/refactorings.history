@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 23 resources" deleteContents="false" description="Delete 23 resources" element1="/Generic" element10="/item11" element11="/item12" element12="/item13" element13="/item14" element14="/item15" element15="/item17" element16="/item18" element17="/item20" element18="/item22" element19="/item24" element2="/HashCode" element20="/item28" element21="/item30" element22="/item34" element23="/item42" element3="/item_객체지향" element4="/item01" element5="/item02" element6="/item07" element7="/item08" element8="/item09" element9="/item10" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="23" stamp="1639811211778"/>
+</session>

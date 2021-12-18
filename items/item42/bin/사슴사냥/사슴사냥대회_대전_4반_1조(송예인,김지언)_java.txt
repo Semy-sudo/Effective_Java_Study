@@ -1,0 +1,2 @@
+//static Opponent Me = new Opponent(){
+//public int hunt(int opp, int turn, int opp_prev, int opp_last_pattern[][]){}};

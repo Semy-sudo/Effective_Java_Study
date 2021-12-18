@@ -1,0 +1,24 @@
+package BuilderPattern;
+
+public class ComputerFactory {
+	
+	private Blueprint print;
+	
+	//다양한 블루 프린트 설계를 가질 수 있음
+	public void setBlueprint(Blueprint print){
+		this.print = print;
+	}
+	
+	//make 함수를 통해 해당 프린터에 set 함수로 값을 세팅해주고
+	public void make() {
+		print.setRam();
+		print.setCpu();
+		print.setStorage();
+	}
+	
+	//설계도가 반영된 컴퓨터를 리턴해준다.
+	public Computer getComputer() {
+		return print.getComputer();
+	}
+
+}

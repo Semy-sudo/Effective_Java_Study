@@ -1,0 +1,11 @@
+package item45;
+
+public class Calculator {
+	public static int staticSum(int x,int y) {
+		return x+y;
+	}
+	public int instanceSum(int x,int y) {
+		return x+y;
+	}
+
+}

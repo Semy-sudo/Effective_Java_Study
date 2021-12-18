@@ -1,0 +1,25 @@
+package item46;
+
+import java.util.Optional;
+import java.util.function.BinaryOperator;
+import java.util.stream.Stream;
+
+public class ReductionTest {
+
+	public static void main(String[] args) {
+		Stream<Integer> numbers = Stream.of(1,2,3,4,5);
+		Optional<Integer> sum = numbers.reduce(new BinaryOperator<Integer>(){
+
+			@Override
+			public Integer apply(Integer t, Integer u) {
+				return t+u;
+			}
+			
+		});
+		sum.ifPresent(s-> System.out.print(s));
+		
+		Optional<Integer> sum2 = numbers.reduce((x,y)-> x+y);
+		sum2.ifPresent(s -> System.out.print(s));
+	}
+
+}

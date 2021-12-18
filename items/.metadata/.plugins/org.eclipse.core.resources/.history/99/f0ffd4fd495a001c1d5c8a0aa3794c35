@@ -1,0 +1,12 @@
+package item44;
+
+public class TestLamda {
+
+	public static void main(String[] args) {
+		//1. Runnable
+		Runnable runnable = () -> System.out.println("running!!!");//람다로 구현
+		runnable.run();
+
+	}
+
+}

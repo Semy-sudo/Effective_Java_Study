@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/Users/semysong/Desktop/Effective-Java/item02/.metadata/.plugins/org.eclipse.jdt.core
+1198071263.index
+2155015707.index

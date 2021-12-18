@@ -1,0 +1,30 @@
+package Serialize;
+
+class Solution02 {
+    public int solution(int n, int k) {
+        //1. 소수로 만들기
+    	int next = n;
+    	StringBuilder sb = new StringBuilder();
+    	while(next>=k) {
+    		sb.append(next%k);
+    		next = next/k;
+    	}
+    	sb.append(next);
+    	
+    	String st = sb.toString();
+    	System.out.print(st);
+    	return 0;
+    }
+}
+
+public class KakaoTest02 {
+
+	public static void main(String[] args) {
+		int n = 437674;
+		int k = 3;
+		Solution02 sol = new Solution02();
+		sol.solution(n, k);
+
+	}
+
+}

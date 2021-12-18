@@ -1,0 +1,45 @@
+package BuilderPattern;
+
+public class NutritionFacts {
+
+	private final int servingSize;
+	private final int serving;
+	private final int calories;
+	
+	public static class Builder{
+		//필수 매개변수 정의
+		private int servingSize;
+		
+		//선택 매개변수 정의
+		private int serving;
+		private int calories;
+		
+		public Builder(int servingSize) {
+			this.servingSize = servingSize;
+		}
+		
+		//세터 매서드들로 선택변수에 값 넣을 수 있음
+		public Builder serving(int val) {
+			this.serving = val;
+			return this;
+		}
+		
+		public Builder calories(int val) {
+			this.calories = val;
+			return this;
+		}
+		
+		//마지막으로 build 메서드를 호출해 필요한 변수를 얻는다.
+		public NutritionFacts build() {
+			return new NutritionFacts(this);
+		}
+	}
+	
+	//생성자
+	private NutritionFacts(Builder builder) {
+		servingSize = builder.servingSize;
+		serving = builder.serving;
+		calories = builder.calories;
+	}
+
+}

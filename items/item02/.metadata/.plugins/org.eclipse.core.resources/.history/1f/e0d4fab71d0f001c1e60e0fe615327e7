@@ -1,0 +1,6 @@
+package BuilderPattern2;
+//Computer 객체의 생성을 관리한다.
+public class ComputerBuilder {
+	Computer computer = new Computer();
+	
+}

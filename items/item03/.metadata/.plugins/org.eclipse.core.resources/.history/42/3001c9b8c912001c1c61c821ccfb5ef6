@@ -1,0 +1,70 @@
+package Serialize;
+
+class Solution02 {
+    public int solution(int n, int k) {
+    	int ans = 0;
+        //1. 소수로 만들기
+    	int next = n;
+    	StringBuilder sb = new StringBuilder();
+    	while(next>=k) {
+    		sb.append(next%k);
+    		next = next/k;
+    	}
+    	sb.append(next);
+    	
+    	String st = sb.toString();
+    	
+    	//2. 만들어진 숫자스트링으로 해당 조건에 만족하는 개수 세주기
+    	int r =0;
+    	int l = r+1;
+    	while(l<st.length()) {
+    		//마지막 위치일 경우
+    		if(r!=0 && l == st.length()-1 && st.charAt(r-1)==0) {
+    			int num = Integer.parseInt(st.substring(r, l+1));
+    			if(isdecimal(num)) {
+    				ans++;
+    			}
+    			l++;
+    			continue;
+    		}
+    		if(st.charAt(l)==0) {
+    			int num = Integer.parseInt(st.substring(r,l));
+    			if(isdecimal(num)) {//소수이면
+    				ans++;
+    			}
+    			r = l+1;
+    			l = r+1;//위치변경
+    			System.out.println(l);
+    			
+    		}else {
+    			l++;
+    		}
+    		
+    	}
+    	System.out.println(ans);
+    	
+    	
+    	return ans;
+    	
+    }
+
+	private boolean isdecimal(int num) {
+		boolean result = true;
+		for(int i=2;i<num;i++) {
+			if(num%i==0) result = false; 
+		}
+		return result;
+	}
+}
+
+public class KakaoTest02 {
+
+	public static void main(String[] args) {
+		int n = 437674;
+		int k = 3;
+		Solution02 sol = new Solution02();
+		sol.solution(n, k);
+
+	}
+
+}
