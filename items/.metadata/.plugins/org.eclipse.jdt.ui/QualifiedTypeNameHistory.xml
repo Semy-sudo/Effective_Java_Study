@@ -43,9 +43,6 @@
     <fullyQualifiedTypeName name="java.security.Key"/>
     <fullyQualifiedTypeName name="java.util.function.IntBinaryOperator"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-    <fullyQualifiedTypeName name="java.util.function.Function"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
@@ -54,7 +51,12 @@
     <fullyQualifiedTypeName name="java.net.URLDecoder"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="java.util.function.BinaryOperator"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.rmi.server.Operation"/>
+    <fullyQualifiedTypeName name="java.util.function.Function"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collector"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 </qualifiedTypeNameHistroy>
